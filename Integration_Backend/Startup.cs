@@ -60,6 +60,14 @@ public class Startup
         }
         else
         {
+            app.UseDeveloperExceptionPage();
+            // Swagger uniquement en mode développement
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Integration");
+                c.RoutePrefix = "swagger"; // Endpoint pour accéder à l'interface Swagger
+            });
             // Configuration pour l'environnement de production
             // par exemple : app.UseExceptionHandler("/Home/Error");
             // app.UseHsts();
