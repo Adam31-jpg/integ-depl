@@ -7,8 +7,7 @@ import { Task } from './task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent {
-  
-task:Task=new Task();
+  task: Task = new Task();
   constructor() { }
  
 }
