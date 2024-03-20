@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Task } from './task';
+import { Component, Input } from '@angular/core';
+import { Todo } from '../../models/todo-model';
 
 @Component({
   selector: 'app-task',
@@ -7,8 +7,9 @@ import { Task } from './task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent {
-  
-task:Task=new Task();
   constructor() { }
+  @Input() task: Todo = { id: 0, name: ''};
+
+
  
-}
+} 
